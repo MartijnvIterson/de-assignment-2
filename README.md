@@ -164,7 +164,3 @@ gcloud dataproc clusters delete $CLUSTER --region=$REGION --project=$PROJECT --q
 
 - `src/batch_flight_delays.py`: reads raw flights CSVs, cleans and enriches with airlines/airports data, writes cleaned Parquet (silver) partitioned by date, computes daily route aggregations (gold), and writes aggregations to BigQuery.
 - `src/stream_flight_delays.py`: reads new CSV files from `gs://<BUCKET>/stream/flights_in/` as a streaming source, applies cleaning and enrichment, computes windowed metrics, writes outputs to console, Parquet and BigQuery with checkpointing.
-
----
-
-This README is provided as the project documentation and reference. The PowerShell commands shown above are included exactly as in the original file and have not been modified.
